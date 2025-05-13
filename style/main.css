@@ -1,0 +1,555 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.wrapper {
+  width: 100%;
+}
+.container-header,
+.container-footer {
+  background-color: #202127;
+  width: 100%;
+}
+#header {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #202127;
+  align-items: center;
+  padding: 10px 20px;
+}
+#header .nav ul li:hover > a {
+  color: yellow;
+}
+#header .nav ul li {
+  position: relative;
+}
+#header .nav ul li ul.product-type {
+  position: absolute;
+  display: none;
+  background-color: #333;
+  top: 70px;
+  width: 200px;
+}
+#header .nav ul li ul.product-type > li {
+  border-bottom: 1px solid white;
+  padding: 15px;
+}
+#header .nav ul li ul.product-type li a {
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 0px;
+  transition: color 0.3s ease;
+}
+#header .nav ul li:hover ul.product-type {
+  display: block;
+}
+#header .nav ul li ul.product-type li:hover > a {
+  color: yellow;
+}
+#header .nav ul li ul.product-type li:hover ul.Giay_Bong_Da {
+  display: block;
+}
+#header .nav ul li ul.Giay_Bong_Da {
+  position: absolute;
+  background-color: gray;
+  top: 0;
+  left: 200px;
+  width: 200px;
+  display: none;
+}
+#header .nav ul li ul.Giay_Bong_Da li {
+  padding: 15px;
+  border-bottom: 1px solid wheat;
+  /* background-color: #333; */
+}
+
+#header .nav ul li ul.Giay_Bong_Da li a {
+  color: white;
+  padding: 6px;
+}
+.img-header img {
+  width: 95px;
+  height: 56px;
+}
+.nav ul {
+  display: flex;
+}
+.nav ul li {
+  list-style: none;
+  padding: 25px 10px;
+}
+.nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  align-items: center;
+  font-size: 18px;
+  margin-right: 40px;
+}
+.icon-header {
+  padding: 12px;
+}
+.icon-header i {
+  color: #fff;
+  font-size: 24px;
+  margin-right: 30px;
+}
+
+.count-item {
+  position: absolute;
+  color: #fff;
+  background-color: darkturquoise;
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 10px;
+  top: 50%;
+  right: 30px;
+
+  transform: translateX(100%);
+}
+#main {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.Hang-Moi {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+.Hang-Moi h1 {
+  font-weight: bold;
+  color: #555555;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+.product {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 20px;
+}
+.items:hover,
+.items2:hover {
+  transform: scale(1.03);
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product .items {
+  width: 22%;
+}
+.product .items img {
+  width: 100%;
+  gap: 10px;
+}
+.items a {
+  text-decoration: none;
+  color: inherit;
+}
+.items h3 {
+  font-size: 16px;
+  height: 50px;
+  margin-bottom: 40px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+}
+.price .old-price {
+  text-decoration: line-through;
+  color: gray;
+  padding: 10px 5px;
+}
+.price .new-price {
+  color: red;
+  padding: 10px 15px;
+  font-weight: bold;
+  margin-right: 50px;
+}
+.Tim-Hang {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+.Tim-Hang h1 {
+  font-weight: bold;
+  color: #555555;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+
+.product .items2 {
+  width: 23%;
+}
+.product .items2 img {
+  width: 100%;
+  gap: 10px;
+}
+.product .items2 h2 {
+  font-size: 16px;
+  text-transform: uppercase;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.product .items2 p {
+  font-size: 16px;
+  color: gray;
+  padding: 0;
+  margin-bottom: 40px;
+}
+.product .items2 a {
+  text-decoration: none;
+  color: inherit;
+}
+#footer {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  /* margin-top: 60px; */
+  background-color: #202127;
+  color: #fff;
+  font-size: 16px;
+  padding: 20px;
+}
+#footer h2 {
+  margin-top: 20px;
+}
+#footer .about_us {
+  width: 30%;
+}
+#footer .about_us h2 {
+  text-transform: uppercase;
+  margin-left: 10px;
+}
+.address1 {
+  margin-bottom: 20px;
+}
+.sinh_vien {
+  background-color: #fff;
+}
+.sinh_vien p {
+  text-align: center;
+  color: #202127;
+  font-size: 16px;
+}
+.address1 a i {
+  font-size: 22px;
+  color: #fff;
+  margin-right: 14px;
+
+  height: 30px;
+}
+.address1 a {
+  text-decoration: none;
+  color: yellow;
+}
+.address1 p {
+  margin-left: 25px;
+}
+.Link-Huong-Dan h2 {
+}
+.Link-Huong-Dan .info ul {
+  padding: 0px;
+}
+.Link-Huong-Dan .info ul li {
+  list-style: none;
+  padding: 12px;
+  padding-left: 0;
+}
+.Link-Huong-Dan .info ul li a {
+  text-decoration: none;
+  color: yellow;
+}
+.Link-Huong-Dan .info ul li:first-child {
+  margin-top: 10px;
+}
+.icon-relative {
+  position: relative;
+}
+/* XONG PHAN TRANG CHU ROI ~~~~~~~~~~~~~~ */
+
+/* Phan nay cua chinh sach bao hanh */
+.container-main {
+  background-color: #282931d9;
+  width: 100%;
+}
+#main .huongdanmua {
+  background-color: #282931d9;
+  color: #fff;
+  line-height: 30px;
+}
+#main .huongdanmua h1 {
+  background-image: linear-gradient(180deg, #fdf110fc 0%, #f4f4f4 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  padding: 10px;
+}
+#main .huongdanmua #I,
+#II {
+  color: yellow;
+}
+#main .huongdanmua #chiphiphatsinh {
+  color: yellow;
+}
+/* Phan nay cua huong dan mua hang */
+#main .chinhsachbaohanh {
+  background-color: #282931d9;
+  color: #fff;
+  line-height: 30px;
+}
+#main .chinhsachbaohanh img {
+  width: 100%;
+  margin: 0 auto;
+}
+#main .chinhsachbaohanh p:last-child {
+  color: cornflowerblue;
+}
+#main .chinhsachbaohanh img + p {
+  color: cornflowerblue;
+}
+#main .chinhsachbaohanh .I,
+.II,
+.III {
+  color: yellow;
+}
+/* Chinh sach doi hang */
+#main .chinhsachdoihang {
+  background-color: #282931d9;
+}
+#main .chinhsachdoihang img {
+  width: 100%;
+  margin: 0 auto;
+}
+/* Gioi thieu */
+#main .gioithieu {
+  background-color: #282931d9;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+#main .gioithieu h1 {
+  margin-top: 20px;
+}
+#main .gioithieu h1,
+p {
+  padding: 10px;
+}
+/* All Shoes */
+#main .all_shoes {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  background-color: #282931d9;
+  color: #fff;
+  font-size: 18px;
+}
+
+#main .all_shoes .left_shoes {
+  width: 25%;
+}
+#main .all_shoes .left_shoes .danhmuc {
+  padding: 10px;
+  background-color: #202127;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#main .all_shoes .left_shoes .danhmuc h3 {
+  padding: 15px;
+}
+#main .all_shoes .left_shoes .danhmuc span {
+  line-height: 40px;
+}
+#main .all_shoes .right_shoes {
+  width: 65%;
+}
+#main .all_shoes .right_shoes h2 {
+  text-align: center;
+  padding: 20px;
+}
+#main .all_shoes .right_shoes .option {
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: flex-start; */
+  gap: 10px;
+  padding: 10px;
+}
+#main .all_shoes .right_shoes span {
+  padding: 10px;
+  font-weight: bold;
+  color: #fff;
+}
+#main .all_shoes .right_shoes span:not(:first-child) {
+  padding: 0;
+}
+#main .all_shoes .right_shoes ul li {
+  list-style: none;
+  padding: 10px;
+  border: 1px solid cornsilk;
+  padding-right: 80px;
+}
+#main .all_shoes .right_shoes ul li:not(:first-child) {
+  display: none;
+}
+#main .all_shoes .right_shoes ul:hover li {
+  display: block;
+}
+#main .all_shoes .right_shoes ul li a {
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.5;
+}
+#main .all_shoes .right_shoes .container_all_item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item {
+  width: 32%;
+  border: 1px solid #555555;
+  padding: 10px;
+  font-size: 18px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 25px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item a p {
+  height: 110px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item .khuyen_mai {
+  padding: 0;
+  padding: 5px;
+  background-color: crimson;
+  border-radius: 5px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item .khuyen_mai span {
+  text-align: center;
+  font-size: 12px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item img {
+  width: 100%;
+  object-fit: cover;
+  height: 150px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item p:last-child {
+  font-size: 16px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item p span {
+  padding: 0;
+  color: yellow;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item p span:last-child {
+  text-decoration: line-through;
+  color: gray;
+  float: right;
+}
+#main .all_shoes .right_shoes .number_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  gap: 10px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+#main .all_shoes .right_shoes .number_page div {
+  padding: 12px;
+  border: 1px solid white;
+}
+#main .all_shoes .right_shoes .number_page div:hover {
+  background-color: yellow;
+  color: #333;
+  font-weight: bold;
+}
+#main .all_shoes .right_shoes .number_page div a {
+  text-decoration: none;
+  color: white;
+}
+/* Gia */
+#header .nav ul li ul.product-type2 {
+  position: absolute;
+  display: none;
+  background-color: #333;
+  top: 70px;
+  width: 200px;
+}
+#header .nav ul li ul.product-type2 > li {
+  border-bottom: 1px solid white;
+  padding: 15px;
+  /* width: 400px; */
+}
+#header .nav ul li ul.product-type2 li a {
+  font-size: 16px;
+  padding: 10px;
+  margin-right: 0px;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+#header .nav ul li:hover ul.product-type2 {
+  display: block;
+}
+#header .nav ul li ul.product-type2 li:hover > a {
+  color: yellow;
+}
+/* Gang Tay Thu Mon */
+#main .all_shoes .right_shoes .container_all_item .all_item2 {
+  width: 32%;
+  border: 1px solid #555555;
+  padding: 10px;
+  font-size: 18px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 a {
+  text-decoration: none;
+  color: #fff;
+  line-height: 25px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 a p {
+  height: 110px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 .khuyen_mai {
+  padding: 0;
+  padding: 5px;
+  background-color: crimson;
+  border-radius: 5px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 .khuyen_mai span {
+  text-align: center;
+  font-size: 12px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 img {
+  width: 100%;
+  object-fit: cover;
+  margin-top: 10px;
+  /* height: auto; */
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 p:last-child {
+  font-size: 16px;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 p span {
+  padding: 0;
+  color: yellow;
+}
+#main .all_shoes .right_shoes .container_all_item .all_item2 p span:last-child {
+  text-decoration: line-through;
+  color: gray;
+  float: right;
+}

@@ -66,7 +66,13 @@
   border-bottom: 1px solid wheat;
   /* background-color: #333; */
 }
-
+#header .nav ul li ul,
+#header .nav ul li ul.product-type,
+#header .nav ul li ul.product-type2,
+#header .nav ul li ul.Giay_Bong_Da {
+  position: absolute;
+  z-index: 30;
+}
 #header .nav ul li ul.Giay_Bong_Da li a {
   color: white;
   padding: 6px;
@@ -115,7 +121,73 @@
   margin: 0 auto;
   background-color: #fff;
 }
+#main .banner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  z-index: 1;
+}
+#main .banner .list_img {
+  width: 100%;
+  display: flex;
+}
+#main .banner .list_img img {
+  width: 100%;
+  height: 520px;
+  flex-shrink: 0;
+}
+.banner .list_thumb {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
 
+.banner .list_thumb img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.banner .list_thumb img.active {
+  border: 5px solid #007bff;
+}
+#main .banner .btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: #ccc;
+}
+#main .banner .btns .btn_left {
+  left: 20px;
+}
+#main .banner .btns .btn_right {
+  right: 20px;
+}
+#main .banner .index_banner {
+  display: flex;
+  justify-content: center;
+
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#main .banner .index_banner .index {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  margin: 10px;
+  background-color: #ccc;
+}
+#main .banner .index_banner .index.active {
+  background-color: #007bff;
+}
 .Hang-Moi {
   margin: 0 auto;
   text-align: center;
@@ -552,4 +624,178 @@ p {
   text-decoration: line-through;
   color: gray;
   float: right;
+}
+
+@media (max-width: 1200px) {
+  #main {
+    width: 98%;
+    padding: 0 10px;
+  }
+  .product,
+  .container_all_item {
+    gap: 16px;
+  }
+  .items,
+  .items2,
+  .all_item,
+  .all_item2 {
+    width: 30%;
+    min-width: 220px;
+  }
+}
+
+@media (max-width: 900px) {
+  #main {
+    width: 100%;
+    padding: 0 5px;
+  }
+  .nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .nav ul li {
+    padding: 10px 5px;
+  }
+  .nav ul li a {
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  #main .banner .list_img img {
+    height: 250px;
+  }
+  .banner .list_thumb img {
+    width: 70px;
+    height: 45px;
+  }
+  .items,
+  .items2,
+  .all_item,
+  .all_item2 {
+    width: 45%;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  #main {
+    width: 100%;
+    padding: 0 2px;
+  }
+  #header,
+  .container-header,
+  .container-footer {
+    padding: 0 2px;
+  }
+  .nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav ul li {
+    padding: 8px 0;
+  }
+  .nav ul li a {
+    font-size: 14px;
+    margin-right: 0;
+  }
+  #main .banner .list_img img {
+    height: 120px;
+  }
+  .banner .list_thumb img {
+    width: 40px;
+    height: 25px;
+  }
+  .product,
+  .container_all_item {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  .items,
+  .items2,
+  .all_item,
+  .all_item2 {
+    width: 98% !important;
+    min-width: 120px;
+    margin-bottom: 12px;
+  }
+  .Hang-Moi h1,
+  .Tim-Hang h1,
+  .right_shoes h2 {
+    font-size: 18px;
+  }
+  .items h3,
+  .items2 h2,
+  .all_item p,
+  .all_item2 p {
+    font-size: 14px;
+  }
+  .option ul {
+    flex-direction: column;
+    gap: 4px;
+  }
+  .danhmuc {
+    font-size: 15px;
+  }
+  .left_shoes,
+  .right_shoes {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.product,
+.container_all_item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+.items,
+.items2,
+.all_item,
+.all_item2 {
+  width: 22%;
+  min-width: 220px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: box-shadow 0.2s;
+}
+.items:hover,
+.items2:hover,
+.all_item:hover,
+.all_item2:hover {
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.items img,
+.items2 img,
+.all_item img,
+.all_item2 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+#backToTop {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 30px;
+  z-index: 100;
+  font-size: 28px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s;
+}
+#backToTop:hover {
+  background: #0056b3;
 }

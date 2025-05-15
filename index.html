@@ -6,8 +6,18 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   
     <link rel="stylesheet" href="style/main.css" />
+ 
     <title>Shop Ban Giay Da Bong</title>
   </head>
+  <button id="backToTop" title="Lên đầu trang">&#8679;</button>
+  <!-- Popup giỏ hàng -->
+  <div id="cart-popup" style="display:none;">
+    <div class="cart-content">
+      <h2>Giỏ hàng</h2>
+      <ul id="cart-list"></ul>
+      <button id="close-cart">Đóng</button>
+    </div>
+  </div>
   <body>
     <div class="wrapper">
 
@@ -80,15 +90,39 @@
       </div>
 
       <div id="main">
-        <div class="list-neoduct">
+    
+         <div class="banner">
+            <div class="list_img">
+              <img src="img/Inigo.jpg" alt="Inigo">
+              <img src="img/Yamal.jpg" alt="Yamal">
+              <img src="img/Pedri.jpg" alt="Pedri">
+              <img src="img/DeJong.jpg" alt="DeJong">
+            </div>
+             <div class="list_thumb">
+              <img src="img/Inigo.jpg" alt="Inigo">
+              <img src="img/Yamal.jpg" alt="Yamal">
+              <img src="img/Pedri.jpg" alt="Pedri">
+              <img src="img/DeJong.jpg" alt="DeJong">
+              </div>
+            <div class="btns">
+              <div class="btn btn_left"><i class="fas fa-angle-left"></i></div>
+              <div class="btn btn_right"><i class="fas fa-angle-right"></i></div>
+            </div>
+             <div class="index_banner">
+              <div class="index index0 active"></div>
+              <div class="index index1"></div>
+              <div class="index index2"></div>
+              <div class="index index3"></div>
+            </div>
+          </div>
+         
 
-            <!-- <div class="w-items"> -->
+        <div class="list-product">
           <div class="Hang-Moi"><h1>Hàng Mới Về</h1></div>
           <div class="product">
 
             <div class="items">
              <a href=""><img src="./img/anh_sp_add-01-01-01-04-03-2-2_fe97a5b8879348d190b87fffe2f95a72_medium.jpg" alt=""></a>
-              
               <h3>  
                 Giày đá bóng Nike Phantom GX II Pro TF Mad Energy - Mint/Atomic Red-Off Noir FJ2583-300
               
@@ -152,6 +186,7 @@
             </div>
           </div>
         </div>
+
         <div class="find-items">
           <div class="Tim-Hang"><h1>Bạn Đang Tìm</h1></div>
           <div class="product">
@@ -212,7 +247,7 @@
             </div>
           </div>
         </div>
-       </div>
+      </div>
 
        
        <div class="container-footer">
@@ -283,8 +318,9 @@
          </div>
        </div>
       
-      </div>
+      
     
     </div>
+       <script src="js/main.js"></script> 
   </body>
 </html>

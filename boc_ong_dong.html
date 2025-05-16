@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style/main.css" />
     <title>Shop Ban Giay Da Bong</title>
   </head>
+    <button id="backToTop" title="Lên đầu trang">&#8679;</button>
+
   <body>
     <div class="wrapper">
 
@@ -72,7 +74,7 @@
           <div class="icon-header">
             <div class="icon-relative">
               <i class="fa-solid fa-search"></i>
-              <i class="fa-solid fa-cart-shopping"></i>  
+              <i id="cart-icon" class="fa-solid fa-cart-shopping"></i> 
               <span class="count-item">0</span>
             </div>
           </div>
@@ -119,7 +121,12 @@
                       <p>
                           <span>   350.000 ₫ </span>
                           <span> </span>
-                      </p>
+                      </p><button
+    class="add-to-cart"
+    data-name="Lót ống đồng Nike J Guard Black- White SP0040-009"
+    data-price=" 350.000 ₫ "
+    data-img="./img/sp0040-009-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                     </div>
 
                     <div class="all_item2">
@@ -135,7 +142,12 @@
                         <p>
                             <span>  745.000 ₫</span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Bọc ống đồng Nike Mercurial Lite Shinguard màu đỏ cam DN3611-850"
+    data-price="  745.000 ₫ "
+    data-img="./img/dn3611-850-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -150,7 +162,12 @@
                         <p>
                             <span> 350.000 ₫ </span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Lót ống đồng Nike J Guard White- Black SP0040-101"
+    data-price=" 350.000 ₫ "
+    data-img="./img/1484638038-Nike-J-Guard-White-Black-SP-0040-101-4 (1).jpg"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -165,7 +182,12 @@
                         <p>
                             <span>    450.000 ₫</span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Ốp bảo vệ Adidas Predator Training Shin Pad – Black / White / Pink – HN5588"
+    data-price="   450.000 ₫ "
+    data-img="./img/hn5588-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -180,7 +202,12 @@
                         <p>
                             <span>  270.000 ₫</span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Ốp bảo vệ ống đồng Adidas Tiro Club ShinGuard GI6387"
+    data-price="270.000 ₫ "
+    data-img="./img/den_Op_bao_ve_ong_chan_Tiro_Club_trang_GJ7756_01_standard-300x300.jpg"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -196,7 +223,12 @@
                         <p>
                             <span>     485.000 ₫</span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Lót ống đồng Nike Mercurial Hardshell màu xanh trắng DN3614-420"
+    data-price="  485.000 ₫ "
+    data-img="./img/dn3614-420-1024x1024.png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                   <div class="all_item2">
@@ -212,7 +244,12 @@
                       <p>
                           <span>   485.000 ₫ </span>
                           <span> </span>
-                      </p>
+                      </p><button
+    class="add-to-cart"
+    data-name="Lót ống đồng Nike Mercurial Hardshell màu đỏ cam DN3614-850"
+    data-price="485.000 ₫  "
+    data-img="./img/dn3614-850-1024x1024.png"
+  >Thêm vào giỏ hàng</button>
                     </div>
 
                 
@@ -299,5 +336,17 @@
 
       </div>
     </div>
+     <div id="cart-popup" style="display:none; position:fixed; top:60px; right:40px; background:#222; color:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:9999; min-width:340px; max-width:90vw;">
+  <div style="padding:16px;">
+    <h2 style="text-align:center;"><i class="fa-solid fa-cart-shopping"></i><br>GIỎ HÀNG</h2>
+    <ul id="cart-list" style="list-style:none; padding:0; margin:0; min-height:60px;"></ul>
+    <div style="margin-top:16px; font-size:18px;">
+      <span>TỔNG TIỀN:</span>
+      <span id="cart-total" style="float:right; font-weight:bold; color:#FFD600;">0₫</span>
+    </div>
+    <button id="view-cart" style="width:100%;margin-top:18px;padding:12px 0;background:#FFD600;color:#222;font-size:20px;font-weight:bold;border:none;border-radius:8px;cursor:pointer;">XEM GIỎ HÀNG</button>
+  </div>
+</div>
+    <script src="js/main.js"></script>
   </body>
 </html>

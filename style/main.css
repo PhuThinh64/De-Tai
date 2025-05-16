@@ -93,7 +93,7 @@
   color: #fff;
   align-items: center;
   font-size: 18px;
-  margin-right: 40px;
+  margin-right: 18px;
 }
 .icon-header {
   padding: 12px;
@@ -798,4 +798,48 @@ p {
 }
 #backToTop:hover {
   background: #0056b3;
+}
+/* Thêm vào cuối file main.css */
+.add-to-cart {
+  display: block;
+  margin: 16px auto 0 auto; /* căn giữa nút */
+  padding: 10px 28px; /* padding lớn hơn */
+  background: orange; /* nền cam */
+  color: #111; /* chữ đen */
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+.add-to-cart:hover {
+  background: #ffb84d;
+  color: #000;
+}
+#cart-popup {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 40px;
+  background: #222;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  min-width: 340px;
+  max-width: 90vw;
+}
+#view-cart {
+  width: 100%;
+  margin-top: 18px;
+  padding: 12px 0;
+  background: #ffd600;
+  color: #222;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }

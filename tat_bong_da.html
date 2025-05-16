@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style/main.css" />
     <title>Shop Ban Giay Da Bong</title>
   </head>
+    <button id="backToTop" title="Lên đầu trang">&#8679;</button>
+
   <body>
     <div class="wrapper">
 
@@ -72,7 +74,7 @@
           <div class="icon-header">
             <div class="icon-relative">
               <i class="fa-solid fa-search"></i>
-              <i class="fa-solid fa-cart-shopping"></i>  
+              <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
               <span class="count-item">0</span>
             </div>
           </div>
@@ -119,7 +121,12 @@
                       <p>
                           <span>  75.000 </span>
                           <span> </span>
-                      </p>
+                      </p><button
+    class="add-to-cart"
+    data-name="Tất bóng đá chống trơn Nevor TCN06 màu đen trắng"
+    data-price="  75.000     "
+    data-img="./img/dsdfdf-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                     </div>
 
                     <div class="all_item2">
@@ -133,9 +140,14 @@
                            </p>
                       </a>
                         <p>
-                            <span> 40.000 ₫</span>
+                            <span> 40.000 ₫   </span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Tất chống trơn Wika màu vàng WCT-VA"
+    data-price=" 40.000 ₫    "
+    data-img="./img/tat-vang-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -150,7 +162,12 @@
                         <p>
                             <span>  40.000 ₫ </span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Tất chống trơn Wika màu xanh blue WCT-XB"
+    data-price=" 40.000 ₫    "
+    data-img="./img/wct-xb-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -165,7 +182,12 @@
                         <p>
                             <span> 330.000 ₫</span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Tất Nike Academy OTC màu trắng – SX4120-101"
+    data-price=" 330.000 ₫   "
+    data-img="./img/sx4120-101-1024x1024 (2).png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -181,7 +203,12 @@
                         <p>
                             <span>  95.000 ₫  </span>
                             <span>  </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Tất cắt AOlikes để giữ lót ống đồng – màu trắng"
+    data-price=" 95.000 ₫   "
+    data-img="./img/aolikes-ong-dong-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                       <div class="all_item2">
@@ -197,7 +224,12 @@
                         <p>
                             <span>   400.000 ₫ </span>
                             <span>   </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Tất bóng đá Adidas Adi Sock 18 – Green / White / Grey – CF3574"
+    data-price=" 400.000 ₫    "
+    data-img="./img/CF3574-2-300x300 (1).png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                   <div class="all_item2">
@@ -213,7 +245,12 @@
                       <p>
                           <span>  400.000 ₫ </span>
                           <span> </span>
-                      </p>
+                      </p><button
+    class="add-to-cart"
+    data-name="Tất bóng đá Adidas Santos 18 – White / Red / Grey – CF3582"
+    data-price=" 400.000 ₫   "
+    data-img="./img/cf3582-1024x1024 (1).png"
+  >Thêm vào giỏ hàng</button>
                     </div>
 
                     <div class="all_item2">
@@ -229,7 +266,12 @@
                         <p>
                             <span>  300.000 ₫ </span>
                             <span> </span>
-                        </p>
+                        </p><button
+    class="add-to-cart"
+    data-name="Tất Adidas Milano AJ5904 Black"
+    data-price="300.000 ₫   "
+    data-img="./img/AJ5904-300x300.png"
+  >Thêm vào giỏ hàng</button>
                       </div>
                       
                       <div class="all_item2">
@@ -245,7 +287,12 @@
                         <p>
                             <span>   30.000 ₫ </span>
                             <span> </span>
-                        </p>
+                        </p><button
+     class="add-to-cart"
+    data-name="Tất bóng đá soccerstore.vn màu trắng – #tatscs"
+    data-price="30.000 ₫     "
+    data-img="./img/tatscs-1024x1024.png"
+  >Thêm vào giỏ hàng</button>
                       </div>
 
                 </div>
@@ -330,5 +377,17 @@
 
       </div>
     </div>
+     <div id="cart-popup" style="display:none; position:fixed; top:60px; right:40px; background:#222; color:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.2); z-index:9999; min-width:340px; max-width:90vw;">
+  <div style="padding:16px;">
+    <h2 style="text-align:center;"><i class="fa-solid fa-cart-shopping"></i><br>GIỎ HÀNG</h2>
+    <ul id="cart-list" style="list-style:none; padding:0; margin:0; min-height:60px;"></ul>
+    <div style="margin-top:16px; font-size:18px;">
+      <span>TỔNG TIỀN:</span>
+      <span id="cart-total" style="float:right; font-weight:bold; color:#FFD600;">0₫</span>
+    </div>
+    <button id="view-cart" style="width:100%;margin-top:18px;padding:12px 0;background:#FFD600;color:#222;font-size:20px;font-weight:bold;border:none;border-radius:8px;cursor:pointer;">XEM GIỎ HÀNG</button>
+  </div>
+</div>
+    <script src="js/main.js"></script>
   </body>
 </html>

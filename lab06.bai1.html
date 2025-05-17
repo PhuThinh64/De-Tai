@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bai 1</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style/main_thuc_hanh.css" />
+    <style>
+      /* Style cơ bản cho topnav */
+      .topnav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        background-color: #333;
+      }
+
+      .topnav ul li a {
+        display: block;
+        color: white;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .topnav ul li a:hover {
+        background-color: #111;
+      }
+
+      /* Biểu tượng menu ẩn khi trên 600px */
+      .iconnav {
+        display: none;
+        color: white;
+        font-size: 24px;
+        padding: 14px 16px;
+        cursor: pointer;
+      }
+
+      /* Responsive cho max-width: 600px */
+      @media screen and (max-width: 600px) {
+        .topnav ul {
+          flex-direction: column;
+          display: none;
+        }
+
+        .topnav.responsive ul {
+          display: flex;
+        }
+
+        .iconnav {
+          display: block;
+          background-color: #333;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topnav" id="mytopnav">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">New</a></li>
+        <li><a href="">Contact</a></li>
+        <li><a href="">About</a></li>
+      </ul>
+      <div class="iconnav">
+        <i class="bi bi-list"></i>
+      </div>
+    </div>
+    <script>
+      const icon = document.querySelector(".iconnav");
+      const topnav = document.getElementById("mytopnav");
+
+      icon.addEventListener("click", () => {
+        topnav.classList.toggle("responsive");
+      });
+    </script>
+  </body>
+</html>

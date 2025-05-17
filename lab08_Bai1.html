@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container-img {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+      }
+      .slider-wrapper {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 100%;
+      }
+      .img {
+        min-width: 100%;
+        height: 400px;
+      }
+      .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .trai-phai {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transform: translateY(-50%);
+        padding: 0 10px;
+      }
+      .tp {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        user-select: none;
+      }
+      .bottom {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+      }
+      .tron {
+        border-radius: 50%;
+        height: 15px;
+        width: 15px;
+        background-color: gray;
+        margin: 0 5px;
+        cursor: pointer;
+      }
+      .tron.active {
+        background-color: aqua;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-img">
+      <div class="slider-wrapper">
+        <div class="img"><img src="./images/slide_1.jpeg" alt="" /></div>
+        <div class="img"><img src="./images/slide_2.jpg" alt="" /></div>
+        <div class="img"><img src="./images/slide_3.jpg" alt="" /></div>
+        <div class="img"><img src="./images/slide_4.jpg" alt="" /></div>
+        <div class="img"><img src="./images/slide_5.jpg" alt="" /></div>
+      </div>
+      <div class="trai-phai">
+        <span class="tp left">&lt;</span>
+        <span class="tp right">&gt;</span>
+      </div>
+      <div class="bottom">
+        <div class="tron active"></div>
+        <div class="tron"></div>
+        <div class="tron"></div>
+        <div class="tron"></div>
+        <div class="tron"></div>
+      </div>
+    </div>
+
+    <script>
+      const sliderWrapper = document.querySelector(".slider-wrapper");
+      const imgs = document.querySelectorAll(".slider-wrapper .img");
+      const btnLeft = document.querySelector(".tp.left");
+      const btnRight = document.querySelector(".tp.right");
+      const dots = document.querySelectorAll(".tron");
+
+      let index = 0;
+      const updateSlider = () => {
+        sliderWrapper.style.transform = `translateX(${-index * 100}%)`;
+        dots.forEach((dot, i) => {
+          dot.classList.toggle("active", i === index);
+        });
+      };
+
+      let autoSlide = setInterval(() => {
+        index = (index + 1) % imgs.length;
+        updateSlider();
+      }, 3000);
+
+      btnLeft.addEventListener("click", () => {
+        clearInterval(autoSlide);
+        index = (index - 1 + imgs.length) % imgs.length;
+        updateSlider();
+        autoSlide = setInterval(() => {
+          index = (index + 1) % imgs.length;
+          updateSlider();
+        }, 3000);
+      });
+
+      btnRight.addEventListener("click", () => {
+        clearInterval(autoSlide);
+        index = (index + 1) % imgs.length;
+        updateSlider();
+        autoSlide = setInterval(() => {
+          index = (index + 1) % imgs.length;
+          updateSlider();
+        }, 3000);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener("click", () => {
+          clearInterval(autoSlide);
+          index = i;
+          updateSlider();
+          autoSlide = setInterval(() => {
+            index = (index + 1) % imgs.length;
+            updateSlider();
+          }, 3000);
+        });
+      });
+    </script>
+  </body>
+</html>

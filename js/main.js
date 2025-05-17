@@ -225,3 +225,18 @@ viewCartBtn.onclick = cartIcon.onclick = function () {
 };
 
 updateCartCount();
+document.querySelectorAll(".add-to-cart").forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const name = this.dataset.name;
+    const price = this.dataset.price;
+    const img = this.dataset.img;
+    let found = cart.find((sp) => sp.name === name && sp.price === price);
+    if (found) {
+      found.quantity = Number(found.quantity) || 1;
+    } else {
+      cart.push({ name, price, img, quantity: 1 });
+    }
+    saveCart();
+    alert("Đã thêm vào giỏ hàng!"); // Thêm dòng này
+  });
+});
